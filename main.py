@@ -25,13 +25,13 @@ from discord.ext.commands import check
 import re
 import datetime
 
-TOKEN = 'MTI0ODUyMTQ4NTkxNjU2OTY2MA.Gg41mL.K5q8AX5KWbRL1mlnmHWps7zD9xTFfsYm9AhDaM'
+TOKEN = ''
 
-guild_ids = [1237788694245675170]
+guild_ids = []
 
 client = commands.Bot(command_prefix="!", intents=discord.Intents.all(), guild_ids=guild_ids)
 
-log_channel_id = 1249332294414630993
+log_channel_id = 
 
 @client.event
 async def on_guild_join(guild):
@@ -46,11 +46,11 @@ async def on_message(message):
     if message.author.bot:
         return
 
-    # Check if the user has the specified roles
-    if any(role.id in [1237788694333882395, 1237788694346469377, 1237788694346469382] for role in message.author.roles):
+    
+    if any(role.id in [(ролисключения)] for role in message.author.roles):
         return
 
-    if "<@645149664911425557>" in message.content.lower():
+    if "<@айди чела>" in message.content.lower():
         await message.delete()
         response_message = await message.channel.send(f"<@{message.author.id}>, Нельзя пинговать девелоперов!!!", mention_author=False)
         await asyncio.sleep(2)
@@ -61,7 +61,7 @@ async def on_message(message):
         await message.channel.send(response, reference=message)
 
     if "!кфг" in message.content.lower():
-        response = message.content.lower().replace("!кфг", f"Скачать пак кфг можно в канале <#{1249254741670887444}>.")
+        response = message.content.lower().replace("!кфг", f"Скачать пак кфг можно в канале <#{канал}>.")
         await message.channel.send(response, reference=message)
 
     if "!рейсер" in message.content.lower():
